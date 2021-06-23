@@ -12,14 +12,30 @@ function createDirectoryIfNeeded(path) {
   }
 }
 
+function createMDXDocumentation(content) {
+  return "import { Story, Canvas } from '@storybook/addon-docs/blocks';\n\n" + content;
+}
+
 function createTemplate(component, index, content) {
-  return "export default {\n\
-    title: 'Components/" + component + "'\n\
+  return "import CustomMDXDocumentation from './Custom-MDX-Documentation.mdx';\n\
+  export default {\n\
+    title: 'Components/" + component + "',\n\
+    parameters: {\n\
+      docs: {\n\
+        page: CustomMDXDocumentation,\n\
+      }\n\
+    },\n\
   }\n\
   \n\
   export const " + component + "_" + index + " = () => {\n\
     return `" + content + "`\n\
   }";
+}
+
+const convertToKebabCase = (string) => {
+  return string.replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/\s+/g, '-')
+    .toLowerCase();
 }
 
 // TODO: build this list automatically from docs
@@ -39,7 +55,7 @@ const files = [
   ['ListGroup', '../_site/docs/5.0/components/list-group/index.html'],
   ['Modal', '../_site/docs/5.0/components/modal/index.html'],
   ['Navbar', '../_site/docs/5.0/components/navbar/index.html'],
-  ['Navs', '../_site/docs/5.0/components/navs/index.html'],
+  // ['Navs', '../_site/docs/5.0/components/navs/index.html'],
   ['NavsTabs', '../_site/docs/5.0/components/navs-tabs/index.html'],
   ['OffCanvas', '../_site/docs/5.0/components/offcanvas/index.html'],
   ['Pagination', '../_site/docs/5.0/components/pagination/index.html'],
@@ -82,11 +98,15 @@ createDirectoryIfNeeded(outputDirectory);
       e => e.innerHTML));
 
       let index = 0;
+      let mdxContent = '';
       e.forEach(example => {
         const outputFileDirectory = outputDirectory + '/' + file[0];
         const outputFile = outputFileDirectory + '/' + file[0] + '_' + index + '.stories.js';
 
         console.log('creating ' + outputFile + '...');
+
+        // Fill the MDX doc content with this component
+        mdxContent += '<Canvas>\n<Story id="components-' + file[0].toLowerCase() + '--' + convertToKebabCase(file[0]) + '-' + index + '"/>\n</Canvas>\n\n';
 
         // Automatically remove HTML comments that would break the story
         example = example.replace(/<!--[\s\S]*?-->/gm, '');
@@ -107,6 +127,15 @@ createDirectoryIfNeeded(outputDirectory);
         }
         index++;
       })
+
+      // Create the MDX documentation
+      try {
+        fs.writeFileSync(outputDirectory + '/' + file[0] + '/Custom-MDX-Documentation.mdx', createMDXDocumentation(mdxContent));
+      } catch (err) {
+        console.error(err);
+        process.exit(1);
+      }
+
       await page.close();
     }
     catch (err) {
