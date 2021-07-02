@@ -27,9 +27,7 @@ function createTemplate(component, index, content) {
     },\n\
   }\n\
   \n\
-  export const " + component + "_" + index + " = () => {\n\
-    return `" + content + "`\n\
-  }";
+  export const " + component + "_" + index + " = () => `" + content + "`";
 }
 
 const convertToKebabCase = (string) => {
