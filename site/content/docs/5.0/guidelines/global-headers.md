@@ -18,7 +18,7 @@ toc: true
   <div class="container">
     <h3 class="mt-5 h5" id="web-glh-sub-003">Supra bar with actions — <a id="web-glh-sub-003" class="ui-kit-id">web-glh-sub-003</a></h3>
   </div>
-  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0">
+  <nav role="navigation" class="navbar navbar-dark bg-dark navbar-expand-md pt-0 d-none d-sm-block d-sm-none d-md-block">
     <div class="container">
       <div class="navbar-nav d-flex flex-row">
         <a href="#" class="nav-link active pb-1" aria-current="page">Personal</a>
