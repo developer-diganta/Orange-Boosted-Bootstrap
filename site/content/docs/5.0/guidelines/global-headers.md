@@ -30,13 +30,15 @@ toc: true
         </a>
         <ul class="navbar-nav ml-auto d-md-none flex-row ml-auto">
           <li class="nav-item">
-            <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-7" aria-expanded="false" aria-controls="search-7">
-            <span class="visually-hidden">Search bar</span>
-            </button>
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+              <span class="visually-hidden">Search</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="visually-hidden">Basket</span>
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+              <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
@@ -45,18 +47,20 @@ toc: true
             </a>
           </li>
         </ul>
-        <button class="navbar-toggler d-block d-md-none mb-md-0 mt-md-auto ml-2 ml-md-3 collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar5" aria-controls="collapsing-navbar5" aria-expanded="false" aria-label="Toggle navigation">
-        <span aria-hidden="true" class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-title-nav" aria-controls="global-header-title-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav ml-auto d-none d-md-flex">
           <li class="nav-item">
-            <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-7" aria-expanded="false" aria-controls="search-7">
-            <span class="visually-hidden">Search bar</span>
-            </button>
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+              <span class="visually-hidden">Search</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-buy">
-            <span class="visually-hidden">Basket</span>
+            <a href="#" class="nav-link nav-icon">
+              <img src="/docs/5.0/assets/img/boosted-buy.svg" width="30" height="50" role="img" alt="Basket" loading="lazy">
+              <span class="visually-hidden">Basket</span>
             </a>
           </li>
           <li class="nav-item">
@@ -64,13 +68,14 @@ toc: true
             <span class="visually-hidden">My account</span>
             </a>
           </li>
+        </ul>
         </ul>
       </div>
     </nav>
     <div class="navbar navbar-dark bg-dark navbar-expand-md bg-dark flex-sm-wrap p-0">
       <hr class="w-100 m-0 d-none d-md-block border-700">
       <div class="container-lg border-bottom">
-        <div class="navbar-collapse collapse" id="collapsing-navbar5">
+        <div class="navbar-collapse collapse" id="global-header-title-nav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Label</a></li>
@@ -81,12 +86,6 @@ toc: true
           </ul>
         </div>
       </div>
-    </div>
-    <div class="collapse bg-dark" id="search-7">
-      <form class="container-lg d-flex py-3" role="search">
-        <input type="search" class="form-control form-control-lg bg-dark" placeholder="Search" aria-label="Search">
-        <button class="btn btn-inverse btn-secondary btn-lg" type="submit">Search</button>
-      </form>
     </div>
   </header>
 </main>
