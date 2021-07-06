@@ -34,10 +34,10 @@ toc: true
             </button>
           </li>
         </ul>
-        <button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#collapsing-navbar9" aria-controls="collapsing-navbar9" aria-expanded="false" aria-label="Toggle navigation">
-        <span aria-hidden="true" class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-header-search" aria-controls="global-header-search" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse justify-content-between collapse" id="collapsing-navbar9">
+        <div class="navbar-collapse justify-content-between collapse" id="global-header-search">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link active" href="#">Discover</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
@@ -47,15 +47,15 @@ toc: true
             <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
           </ul>
         </div>
-        <ul class="navbar-nav d-none d-md-flex">
+        <ul class="navbar-nav d-none d-md-flex pb-1">
           <li class="nav-item">
             <button type="button" class="nav-link btn btn-icon nav-icon svg-search collapsed" data-toggle="collapse" data-target="#search-9" aria-expanded="false" aria-controls="search-9">
             <span class="visually-hidden">Search bar</span>
             </button>
           </li>
-                <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      </form>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
         </ul>
       </div>
     </nav>
