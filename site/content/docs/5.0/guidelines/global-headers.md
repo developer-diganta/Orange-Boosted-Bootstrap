@@ -30,23 +30,25 @@ toc: true
             <span>Business</span><br>Services
           </h2>
         </a>
-        <ul class="navbar-nav d-md-none flex-row ml-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link nav-icon svg-mail pb-1">
-              <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
-              <span class="visually-hidden">Search</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <svg width="2em" height="2em" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.0/assets/img/boosted-search.svg"/></svg>
-            <a href="#" class="nav-link nav-icon svg-avatar pb-1">
-            <span class="visually-hidden">My account</span>
-            </a>
-          </li>
-        </ul>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#obs-global-header" aria-controls="obs-global-header" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="d-flex">
+          <ul class="navbar-nav d-md-none ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-icon svg-mail">
+                <img src="/docs/5.0/assets/img/boosted-search.svg" width="30" height="50" role="img" alt="Search" loading="lazy">
+                <span class="visually-hidden">Search</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <svg width="2em" height="2em" aria-hidden="true" focusable="false"><use xlink:href="/docs/5.0/assets/img/boosted-search.svg"/></svg>
+              <a href="#" class="nav-link nav-icon svg-avatar pb-1">
+              <span class="visually-hidden">My account</span>
+              </a>
+            </li>
+          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#obs-global-header" aria-controls="obs-global-header" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
         <div class="navbar-collapse justify-content-end collapse" id="obs-global-header">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link active" href="#">Label</a></li>
